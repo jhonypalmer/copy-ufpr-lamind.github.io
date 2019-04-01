@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h2 class="page-heading">Posts</h2>
+
+    {% for post in site.posts %}
+    <div class="post">
+      <div class="post-content">
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+            <span class="post-meta">{{ post.date | date: " %d/%m/%Y" }}</span>
+          </a>
+        </h2>
+        <section class="more"> {{ post.content }} </section>
+      </div>
+
+    </div>
+    {% endfor %}
+
+</div>
